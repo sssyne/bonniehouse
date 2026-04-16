@@ -11,9 +11,9 @@
             --soft-lilac: #E6D7E6;
             --dark-lilac: #8E6E8E;
             --line-green: #06C755; 
-            --text-dark: #333333; /* เปลี่ยนจาก #333 */
+            --text-dark: #333333;
             --bg-light: #F9F7F9;
-            --white: #ffffff; /* เปลี่ยนจาก #fff */
+            --white: #ffffff;
             --transition: all 0.3s ease;
         }
 
@@ -40,18 +40,6 @@
 
         .logo { font-size: 1.6rem; font-weight: 600; color: var(--dark-lilac); text-decoration: none; }
 
-        .hero {
-            padding: 60px 5%;
-            text-align: center;
-            background: linear-gradient(135deg, var(--soft-lilac) 0%, #ffffff 100%);
-        }
-
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            color: var(--dark-lilac);
-            margin-bottom: 15px;
-        }
-
         section { padding: 40px 5%; }
 
         .section-title { text-align: center; margin-bottom: 3rem; }
@@ -61,14 +49,9 @@
             position: relative; display: inline-block;
         }
 
-        .section-title h2::after {
-            content: ''; position: absolute; bottom: -8px; left: 50%;
-            transform: translateX(-50%); width: 40px; height: 3px; background: var(--primary-lilac);
-        }
-
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
             max-width: 1200px;
             margin: 0 auto;
@@ -81,16 +64,14 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
             transition: var(--transition);
             border: 1px solid rgba(200, 162, 200, 0.1);
-            display: flex;
-            flex-direction: column;
         }
 
-        .font-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .font-card:hover { transform: translateY(-8px); }
 
         .font-image-box {
             width: 100%;
-            aspect-ratio: 16/9;
-            background: #ffffff; /* เปลี่ยนจาก #fff */
+            aspect-ratio: 1/1; /* ปรับเป็นจัตุรัสตามรูปภาพที่คุณส่งมา */
+            background: #ffffff;
             overflow: hidden;
             border-bottom: 1px solid #f0f0f0;
         }
@@ -98,21 +79,14 @@
         .font-image-box img {
             width: 100%;
             height: 100%;
-            object-fit: contain; 
-            transition: var(--transition);
-        }
-
-        .font-card:hover .font-image-box img {
-            transform: scale(1.03);
+            object-fit: contain; /* โชว์รูปเต็มใบ ไม่โดนตัดขอบ */
         }
 
         .font-info { padding: 1.5rem; text-align: center; }
 
         .font-name { font-size: 1.2rem; font-weight: 600; color: var(--dark-lilac); margin-bottom: 5px; text-transform: capitalize; }
 
-        .font-price { color: #888; font-size: 0.9rem; margin-bottom: 1rem; }
-
-        .price-tag { color: var(--primary-lilac); font-weight: 700; font-size: 1.1rem; display: block; margin-bottom: 15px; }
+        .price-tag { color: var(--primary-lilac); font-weight: 700; font-size: 1.2rem; display: block; margin-bottom: 15px; }
 
         .buy-btn {
             display: block; width: 100%; padding: 12px;
@@ -124,12 +98,12 @@
 
         .contact-line-section {
             background-color: var(--white); border-radius: 25px;
-            max-width: 800px; margin: 60px auto; padding: 2.5rem;
+            max-width: 800px; margin: 40px auto; padding: 2.5rem;
             display: flex; align-items: center; justify-content: space-around;
             flex-wrap: wrap; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        .qr-code-container { width: 180px; padding: 12px; background: #f2edf2; border: 3px solid var(--soft-lilac); border-radius: 20px; text-align: center; }
+        .qr-code-container { width: 180px; padding: 12px; background: #f2edf2; border-radius: 20px; text-align: center; }
         .qr-code-container img { width: 100%; border-radius: 12px; }
 
         footer { background: var(--dark-lilac); color: white; text-align: center; padding: 30px 5%; }
@@ -142,11 +116,6 @@
         <div style="font-size: 0.9rem; color: var(--dark-lilac);">♡ blanche! collection ♡</div>
     </nav>
 
-    <section class="hero">
-        <h1>Handwritten Fonts</h1>
-        <p>ยกระดับงานดีไซน์ของคุณด้วยคอลเลกชันฟอนต์ลายมือคุณภาพสูง ทั้งหมด ๙ สไตล์</p>
-    </section>
-
     <section id="shop">
         <div class="section-title">
             <h2>รายการฟอนต์ทั้งหมด</h2>
@@ -154,92 +123,83 @@
         <div class="container">
             
             <div class="font-card">
-                <div class="font-image-box"><img src="afterglow.png" alt="afterglow font sample"></div>
+                <div class="font-image-box"><img src="afterglow.png" alt="afterglow"></div>
                 <div class="font-info">
                     <p class="font-name">afterglow</p>
-                    <p class="font-price">personal & commercial use</p>
                     <span class="price-tag">฿59.00</span>
-                    <a href="https://line.me/R/ti/p/@bonniehouse" class="buy-btn">สั่งซื้อฟอนต์</a>
+                    <a href="https://line.me/R/ti/p/@388lqyas" class="buy-btn">สั่งซื้อฟอนต์</a>
                 </div>
             </div>
 
             <div class="font-card">
-                <div class="font-image-box"><img src="vanilla-sky.png" alt="Vanilla Sky font sample"></div>
+                <div class="font-image-box"><img src="vanilla-sky.png" alt="Vanilla Sky"></div>
                 <div class="font-info">
                     <p class="font-name">Vanilla Sky</p>
-                    <p class="font-price">personal & commercial use</p>
                     <span class="price-tag">฿59.00</span>
-                    <a href="https://line.me/R/ti/p/@bonniehouse" class="buy-btn">สั่งซื้อฟอนต์</a>
+                    <a href="https://line.me/R/ti/p/@388lqyas" class="buy-btn">สั่งซื้อฟอนต์</a>
                 </div>
             </div>
 
             <div class="font-card">
-                <div class="font-image-box"><img src="mali.png" alt="mali font sample"></div>
+                <div class="font-image-box"><img src="mali.png" alt="mali"></div>
                 <div class="font-info">
                     <p class="font-name">mali</p>
-                    <p class="font-price">personal & commercial use</p>
                     <span class="price-tag">฿59.00</span>
-                    <a href="https://line.me/R/ti/p/@bonniehouse" class="buy-btn">สั่งซื้อฟอนต์</a>
+                    <a href="https://line.me/R/ti/p/@388lqyas" class="buy-btn">สั่งซื้อฟอนต์</a>
                 </div>
             </div>
 
             <div class="font-card">
-                <div class="font-image-box"><img src="moooody.png" alt="moooody font sample"></div>
+                <div class="font-image-box"><img src="moooody.png" alt="moooody"></div>
                 <div class="font-info">
                     <p class="font-name">moooody</p>
-                    <p class="font-price">personal & commercial use</p>
                     <span class="price-tag">฿59.00</span>
-                    <a href="https://line.me/R/ti/p/@bonniehouse" class="buy-btn">สั่งซื้อฟอนต์</a>
+                    <a href="https://line.me/R/ti/p/@388lqyas" class="buy-btn">สั่งซื้อฟอนต์</a>
                 </div>
             </div>
 
             <div class="font-card">
-                <div class="font-image-box"><img src="umbrella.png" alt="Umbrella font sample"></div>
+                <div class="font-image-box"><img src="umbrella.png" alt="Umbrella"></div>
                 <div class="font-info">
                     <p class="font-name">Umbrella</p>
-                    <p class="font-price">personal & commercial use</p>
                     <span class="price-tag">฿59.00</span>
-                    <a href="https://line.me/R/ti/p/@bonniehouse" class="buy-btn">สั่งซื้อฟอนต์</a>
+                    <a href="https://line.me/R/ti/p/@388lqyas" class="buy-btn">สั่งซื้อฟอนต์</a>
                 </div>
             </div>
 
             <div class="font-card">
-                <div class="font-image-box"><img src="moonie.png" alt="Moonie font sample"></div>
+                <div class="font-image-box"><img src="moonie.png" alt="Moonie"></div>
                 <div class="font-info">
                     <p class="font-name">Moonie</p>
-                    <p class="font-price">personal & commercial use</p>
                     <span class="price-tag">฿59.00</span>
-                    <a href="https://line.me/R/ti/p/@bonniehouse" class="buy-btn">สั่งซื้อฟอนต์</a>
+                    <a href="https://line.me/R/ti/p/@388lqyas" class="buy-btn">สั่งซื้อฟอนต์</a>
                 </div>
             </div>
 
             <div class="font-card">
-                <div class="font-image-box"><img src="joocookie.png" alt="joocookie font sample"></div>
+                <div class="font-image-box"><img src="joocookie.png" alt="joocookie"></div>
                 <div class="font-info">
                     <p class="font-name">joocookie</p>
-                    <p class="font-price">personal & commercial use</p>
                     <span class="price-tag">฿59.00</span>
-                    <a href="https://line.me/R/ti/p/@bonniehouse" class="buy-btn">สั่งซื้อฟอนต์</a>
+                    <a href="https://line.me/R/ti/p/@388lqyas" class="buy-btn">สั่งซื้อฟอนต์</a>
                 </div>
             </div>
 
             <div class="font-card">
-                <div class="font-image-box"><img src="goodie.png" alt="Goodie font sample"></div>
+                <div class="font-image-box"><img src="goodie.png" alt="Goodie"></div>
                 <div class="font-info">
                     <p class="font-name">Goodie</p>
-                    <p class="font-price">personal & commercial use</p>
                     <span class="price-tag">฿59.00</span>
-                    <a href="https://line.me/R/ti/p/@bonniehouse" class="buy-btn">สั่งซื้อฟอนต์</a>
+                    <a href="https://line.me/R/ti/p/@388lqyas" class="buy-btn">สั่งซื้อฟอนต์</a>
                 </div>
             </div>
 
             <div class="font-card">
-                <div class="font-image-box"><img src="bonnie.png" alt="bonnie font sample"></div>
+                <div class="font-image-box"><img src="bonnie.png" alt="bonnie"></div>
                 <div class="font-info">
                     <p class="font-name">bonnie</p>
-                    <p class="font-price">personal & commercial use</p>
                     <span class="price-tag">฿59.00</span>
-                    <a href="https://line.me/R/ti/p/@bonniehouse" class="buy-btn">สั่งซื้อฟอนต์</a>
+                    <a href="https://line.me/R/ti/p/@388lqyas" class="buy-btn">สั่งซื้อฟอนต์</a>
                 </div>
             </div>
 
@@ -250,8 +210,8 @@
         <div class="contact-line-section">
             <div class="line-info">
                 <h3>สอบถาม ♡ blanche! ♡</h3>
-                <p>Add Line เพื่อแชทกับทีมงาน</p>
-                <a href="https://line.me/R/ti/p/@bonniehouse" style="background: #06C755; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 15px; font-weight: 600;">LINE OFFICIAL</a>
+                <p>LINE ID: @388lqyas</p>
+                <a href="https://line.me/R/ti/p/@388lqyas" style="background: #06C755; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 15px; font-weight: 600;">ADD LINE</a>
             </div>
             <div class="qr-code-container">
                 <img src="https://qr-official.line.me/gs/M_388lqyas_BW.png?oat_content=qr" alt="LINE QR Code">
@@ -260,7 +220,7 @@
     </section>
 
     <footer>
-        <p>© 2026 bonniehouse x ♡ blanches! collection ♡. All Rights Reserved.</p>
+        <p>© 2026 bonniehouse x ♡ blanches! collection ♡</p>
     </footer>
 
 </body>
